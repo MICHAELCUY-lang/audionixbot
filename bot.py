@@ -14,7 +14,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Bot token from BotFather
-TOKEN = "8166423286:AAHTOH6M-0fjeQggPGM-kKPr2ivi7EqAmqA"
+TOKEN = os.environ.get("BOT_TOKEN", "8166423286:AAHTOH6M-0fjeQggPGM-kKPr2ivi7EqAmqA")
 
 # Setup temporary directory for file processing
 TEMP_DIR = "temp_files"
