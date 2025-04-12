@@ -102,7 +102,7 @@ async def process_mp3_file(update: Update, context: CallbackContext) -> None:
     try:
         # Create a static image (black background) for the video
         audio_clip = AudioFileClip(file_path)
-        image_clip = ImageClip(os.path.join(os.path.dirname(__file__), "static_image.jpg"))
+        image_clip = ImageClip(os.path.join(os.path.dirname(__file__), "static_image.jpeg"))
         image_clip = image_clip.set_duration(audio_clip.duration)
         video_clip = image_clip.set_audio(audio_clip)
         video_clip.write_videofile(output_path, codec='libx264', audio_codec='aac', fps=24)
